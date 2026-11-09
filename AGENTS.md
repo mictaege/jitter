@@ -1,5 +1,8 @@
 # AGENTS.md — jitter
 
+> New to the jitter family? Read the onboarding guide in the family store first:
+> https://github.com/mictaege/jitter-openspec (README.md).
+
 Project context lives in OpenSpec: `openspec/config.yaml` (project context) and
 `openspec/specs/gate-schema/spec.md` (the gate vocabulary schema). Family-level planning lives in
 the store `jitter` (`~/openspec/jitter`, use `openspec ... --store jitter`).
