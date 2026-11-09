@@ -1,0 +1,24 @@
+schema: spec-driven
+
+context: |
+  The jitter repository hosts the schema of the jitter flavour gate vocabulary at its namespace
+  URL https://mictaege.github.io/jitter (GitHub Pages from the `main` branch root, `.nojekyll`).
+  The vocabulary consists of the jitter:onlyIf and jitter:set elements that flavour gate
+  components of an XML resource inside the W3C annotation/appinfo hook; the jitter-plugin
+  resolves them while resources are copied.
+
+  Family: part of the jitter family (store `jitter`, ~/openspec/jitter, use
+  `openspec ... --store jitter`). The SOURCE OF TRUTH for the schema is jitter-plugin's
+  src/main/resources/jitter-gate.xsd, which travels with every plugin release — when it changes,
+  update `jitter-gate.xsd` AND `index.html` in this repo together (both files are identical and
+  served as-is).
+
+  Conventions:
+  - Keep `jitter-gate.xsd` and `index.html` byte-identical; sync both with the plugin's resource
+    on every plugin release that changes the vocabulary.
+  - The schema is deliberately permissive about components AROUND the gates: it only describes
+    the gate elements themselves, so it can validate appinfo content of any vocabulary.
+  - IDE registration works via "Fetch external resource" on the xmlns declaration or a manual
+    URI mapping to .../jitter-gate.xsd.
+
+  Capability spec: openspec/specs/gate-schema/spec.md. User-facing docs: README.md.
